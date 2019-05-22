@@ -1,17 +1,11 @@
 import React from 'react';
 import './App.css';
-import Library from "./Components/Library"
-import Form from "./Components/Form"
+import View from "./Pages/view"
 
 const App: React.FC = () => {
   return (
     <div>
-      <Library options={{
-        message: "Hello message",
-        type: "",
-        position: ""
-      }}></Library>
-      <Form></Form>
+      <View></View>
     </div>
   );
 }

@@ -1,14 +1,21 @@
 import React from "react";
 
+interface Options {
+    message: string,
+    type: string,
+    position: string,
+    isOpen: boolean,
+    options: any
+}
 
-const ToastContainer = ({ options: { message, type, position } }) => {
+const ToastContainer = (options: Options) => {
   return (
     <div
       className={
-        message ? `${position || "top-right"} ${type || "info"}` : "hide"
+        options.isOpen ? `${options.position || "top-right"} ${options.type || "info"}` : "hide"
       }
     >
-      <p>{message}</p>
+      <p>{options.message}</p>
     </div>
   );
 };
