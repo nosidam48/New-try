@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SingleNote from "../Components/Library"
+import Note from "../Components/Library"
 
 export interface Props {
     isOpen: boolean,
@@ -38,11 +38,11 @@ class View extends Component<Props, State> {
 
     componentDidUpdate(lastProps: Props, lastState: State) {
         if (lastProps.isOpen !== this.props.isOpen && this.props.isOpen) {
-            this.addSingleNote(this.props.message, this.props.type, this.props.position);
+            this.addNote(this.props.message, this.props.type, this.props.position);
         }
     }
 
-    addSingleNote(message: string, type: string, position: string): void {
+    addNote(message: string, type: string, position: string): void {
 
         const note = {
             message: message,
@@ -74,16 +74,15 @@ class View extends Component<Props, State> {
     render() {
         const positionList = ["topLeft", "topRight", "bottomLeft", "bottomRight"]
         return (
-            <section id="all-notifications">
+            <section id="all-notes">
                 {
                     positionList.map((position, index) => (
-                        // Create a container for each position of notification
+                        
                         <div className="notification-area" id={position} key={index}>
                             {(this.state.noteToShow || []).map(note => {
-                                // If we are in the right container, we show the component
-                                // If not, we return empty
+                                
                                 if (position === note.position) {
-                                    return <SingleNote
+                                    return <Note
                                         message={note.message}
                                         position={note.position}
                                         type={note.type}

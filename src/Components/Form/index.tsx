@@ -6,7 +6,7 @@ interface CustomInput {
     info: any
 }
 
-class Message extends React.Component<CustomInput> {
+class Form extends React.Component<CustomInput> {
     constructor(props: any) {
         super(props)
     }
@@ -43,4 +43,4 @@ render() {
 }
 }
 
-export default Message;
+export default Form;

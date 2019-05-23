@@ -13,7 +13,7 @@ interface State {
   expired: boolean;
 }
 
-class SingleNote extends React.Component<Props, State> {
+class Note extends React.Component<Props, State> {
 
   show(message: string, position: string, type: string): object {
       const classNames = `note ${position} ${type}`;
@@ -30,11 +30,10 @@ class SingleNote extends React.Component<Props, State> {
   
   render() {
       console.log(this.props)
-      // If the notification state is not expired, we show it
-      // If it is, we return an empty element ''
+      
       return this.props.isOpen ? this.show(this.props.message, this.props.position, this.props.type): "";
   }
 
 }
 
-export default SingleNote;
+export default Note;

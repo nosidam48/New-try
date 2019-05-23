@@ -1,7 +1,5 @@
 import * as React from 'react';
 import './Components/Library/style.css';
-
-// Import the components
 import View from './Pages/view';
 import Form from './Components/Form';
 
@@ -32,8 +30,8 @@ class App extends React.Component<Props, State> {
         }
     }
 
-    addNote(e: any) {
-      e.preventDefault()
+    addNote(event: any) {
+      event.preventDefault()
       
       let message = this.state.formData.message;
       if (!message) {
@@ -49,8 +47,8 @@ class App extends React.Component<Props, State> {
 
     }
 
-    handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        const {name, value} = e.target;
+    handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const {name, value} = event.target;
         this.setState(prevState => ({
             formData: {
                 ...prevState.formData, [name]: value
