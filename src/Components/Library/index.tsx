@@ -29,7 +29,6 @@ class Note extends React.Component<Props, State> {
 
   
   render() {
-      console.log(this.props)
       
       return this.props.isOpen ? this.show(this.props.message, this.props.position, this.props.type): "";
   }

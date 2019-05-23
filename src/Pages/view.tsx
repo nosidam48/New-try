@@ -65,7 +65,6 @@ class View extends Component<Props, State> {
         });
 
         setTimeout(() => {
-            console.log(("removed: " + note));
             
             this.noteArray.shift()
         }, 3000)
