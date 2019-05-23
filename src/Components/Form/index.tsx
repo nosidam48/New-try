@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 
 interface CustomInput {
-    onChange(event: any): void,
-    onSubmit(event: any): void,
+    onChange(event: any),
+    onSubmit(event: any),
     info: any
 }
 
