@@ -6,4 +6,4 @@
 
 ##### Hover over a message for a little extra pizzaz.
 
-![Note Maker GIF](https://github.com/nosidam48/New-try/blob/master/public/Phriendiphy.gif)
+![Note Maker GIF](https://github.com/nosidam48/New-try/blob/master/public/React%20App.gif)
